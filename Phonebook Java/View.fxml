@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phonebook.ViewController">
+    <children>
+        <Label alignment="CENTER" layoutX="238.0" layoutY="14.0" minHeight="16" minWidth="69" prefHeight="30.0" prefWidth="125.0" text="Nyilvántartás">
+         <font>
+            <Font name="Mongolian Baiti" size="19.0" />
+         </font></Label>
+      <SplitPane dividerPositions="0.22909698996655517" layoutY="50.0" prefHeight="599.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <StackPane id="menuPane" fx:id="menuPane" layoutX="-21.0" layoutY="90.0" prefHeight="597.0" prefWidth="134.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Pane id="exportPane" fx:id="exportPane" layoutX="116.0" layoutY="51.0" prefHeight="597.0" prefWidth="458.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button id="exportButton" fx:id="exportButton" onAction="#exportList" layoutX="177.0" layoutY="218.0" mnemonicParsing="false" text="PDF mentése" />
+                        <TextField id="inputExportName" fx:id="inputExportName" layoutX="98.0" layoutY="157.0" prefHeight="25.0" prefWidth="263.0" />
+                        <Label layoutX="116.0" layoutY="26.0" text="Exportálás PDF-be">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="98.0" layoutY="134.0" text="Fájl neve:" />
+                     </children></Pane>
+                  <Pane id="contactPane" fx:id="contactPane" layoutX="126.0" layoutY="61.0" prefHeight="597.0" prefWidth="458.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView id="table" fx:id="table" editable="true" prefHeight="455.0" prefWidth="458.0">
+                          <placeholder>
+                              <Label text="Nincs adat" />
+                          </placeholder>
+                          <columns>
+                          </columns>
+                        </TableView>
+                        <TextField id="inputLastName" fx:id="inputLastName" layoutX="96.0" layoutY="468.0" prefHeight="20.0" prefWidth="189.0" promptText="Hrutka" />
+                        <TextField id="inputFirstName" fx:id="inputFirstName" layoutX="96.0" layoutY="504.0" prefHeight="20.0" prefWidth="189.0" promptText="Pál" />
+                        <TextField id="inputEmail" fx:id="inputEmail" layoutX="96.0" layoutY="542.0" prefHeight="20.0" prefWidth="189.0" promptText="hrutka@example.com" />
+                        <Label alignment="TOP_RIGHT" layoutX="14.0" layoutY="472.0" prefHeight="11.0" prefWidth="66.0" text="Vezetéknév" />
+                        <Label alignment="TOP_RIGHT" layoutX="14.0" layoutY="508.0" prefHeight="11.0" prefWidth="66.0" text="Keresztnév" />
+                        <Label alignment="TOP_RIGHT" layoutX="14.0" layoutY="546.0" prefHeight="11.0" prefWidth="66.0" text="E-mail" />
+                        <Button id="addNewContactButton" fx:id="addNewContactButton" onAction="#addContact" layoutX="350.0" layoutY="504.0" mnemonicParsing="false" text="Felvétel" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+    </children>
+</AnchorPane>
